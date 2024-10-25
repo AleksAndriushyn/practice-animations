@@ -1,0 +1,92 @@
+body {
+    background-color: #cdafaf;
+}
+
+.radioInput {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    width: 60vh;
+    height: 10vh;
+    border-radius: 80px;
+    padding: 5vh;
+    cursor: pointer;
+    background-color: #5efff5;
+    box-shadow: -12px -11px 18px -8px rgba(88 88 88) inset;
+}
+
+input {
+    display: none;
+}
+
+.planet {
+    position: absolute;
+    left: 3vh;
+    background: yellow;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    box-shadow: inset -4px -4px 8px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes sunToMoon {
+    0% {
+        background-color: yellow;
+        transform: translateX(0);
+    }
+    50% {
+        box-shadow: inset -4px 120px 8px rgba(0, 0, 0, 0.5);
+        background-color: goldenrod;
+    }
+    100% {
+        transform: translateX(50vh) rotateZ(360deg);
+        background-color: #93A1B6;
+    }
+}
+
+@keyframes moonToSun {
+    0% {
+        box-shadow: inset -4px -4px 8px rgba(0, 0, 0, 0.5);
+        background-color: #93A1B6;
+        transform: translateX(50vh);
+    }
+    50% {
+        box-shadow: inset -4px 120px 8px rgba(0, 0, 0, 0.5);
+        background-color: goldenrod;
+    }
+    100% {
+        box-shadow: inset -4px -4px 8px rgba(0, 0, 0, 0.5);
+        background-color: yellow;
+        transform: translateX(0) rotateZ(360deg);
+    }
+}
+
+@keyframes sunToMoonContainer {
+    0% {
+        background-color: #5efff5;
+    }
+    50% {
+        background-color: #e3ad69;
+    }
+    100% {
+        box-shadow: 12px -11px 18px -8px rgba(88 88 88) inset;
+        background-color: #767676;
+    }
+}
+
+@keyframes moonToSunContainer {
+    0% {
+        box-shadow: 12px -11px 18px -8px rgba(88 88 88) inset;
+        background-color: #767676;
+    }
+    50% {
+        background: #e3ad69;
+    }
+    100% {
+        box-shadow: -12px -11px 18px -8px rgba(88 88 88) inset;
+        background-color: #5efff5;
+    }
+}
